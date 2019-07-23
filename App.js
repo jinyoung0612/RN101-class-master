@@ -1,12 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 
-export default function App() {
+export default class App extends React.Component {
+  render(){
   return (
     <View style={styles.container}>
-      <Text style={[styles.textBig, styles.textRed]}>Hello World!</Text>
+      <Button title={'click me!'} onPress={() => console.log('Clicked!')}/>
     </View>
   );
+}
 }
 
 const styles = StyleSheet.create({
@@ -16,10 +18,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  textBig:{
-    fontSize: 32,
-  },
-  textRed: {
-    color:'red'
-  },
+ 
 });
