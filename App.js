@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.testBig}>Hello World!</Text>
+      <Text style={[styles.textBig, styles.textRed]}>Hello World!</Text>
     </View>
   );
 }
@@ -16,7 +16,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  testBig:{
+  textBig:{
     fontSize: 32,
+  },
+  textRed: {
+    color:'red'
   },
 });
